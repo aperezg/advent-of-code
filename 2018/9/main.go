@@ -23,6 +23,7 @@ func game(players, maxMarbles int) (winner int) {
 		pos++
 		p++
 	}
+	//fmt.Println(board)
 
 	return 0
 }
@@ -32,7 +33,6 @@ func move(val, current int, slice []int) (int, []int) {
 		slice = append(slice, val)
 		return 1, slice
 	}
-
 	if len(slice) == current {
 		pos := 1
 		return pos, insert(val, 1, 2, slice)
