@@ -19,7 +19,7 @@ var flagtests = []struct {
 	{"21 players; last marble is worth 6111 points: high score is 54718", game{21, 6111}, 54718},
 	{"30 players; last marble is worth 5807 points: high score is 37305", game{30, 5807}, 37305},
 	{"486 players; last marble is worth 70833 points: high score is 373597", game{486, 70833}, 373597},
-	{"486 players; last marble is worth 7083300 points: high score is 373597", game{486, 7083300}, 2954067253},
+	{"486 players; last marble is worth 7083300 points: high score is 2954067253", game{486, 7083300}, 2954067253},
 }
 
 func TestGame(t *testing.T) {
