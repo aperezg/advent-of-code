@@ -8,10 +8,11 @@ import (
 )
 
 func main() {
-	calculate("input.txt")
+	sum := calculate("input.txt")
+	fmt.Println(sum)
 }
 
-func calculate(input string) {
+func calculate(input string) int {
 	f, err := os.Open("input.txt")
 	if err != nil {
 		log.Fatalf("Error reading file %v", err)
@@ -25,10 +26,10 @@ func calculate(input string) {
 		sum += n
 	}
 
-	fmt.Println(sum)
-
 	if err := s.Err(); err != nil {
 		log.Fatal(err)
 	}
+
+	return sum
 
 }
